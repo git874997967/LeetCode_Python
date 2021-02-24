@@ -1,3 +1,4 @@
+# 300  longest increase sequence
 # this method use n^2 time
 def lengthOfLis(nums) :
     # generate a array length = nums all with 1
