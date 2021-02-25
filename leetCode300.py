@@ -1,3 +1,4 @@
+import bisect
 # this method use n^2 time
 def lengthOfLis(nums) :
     # generate a array length = nums all with 1
@@ -15,7 +16,7 @@ def lengthOfLis(nums) :
 # Dynamic Programming with Binary Search
     # Time complexity : O(nlogn). Binary search takes nlogn time and it is called n times.
     # Space complexity : O(n). dp array of size n is used.
-def lengthOfLIS(self, nums: List[int]) -> int:
+def lengthOfLIS(self, nums) :     
     # dp keeps some of the visited element in a sorted list, and its size is lengthOfLIS sofar.
     # It always keeps the our best chance to build a LIS in the future.
     dp = []
