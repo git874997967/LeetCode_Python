@@ -19,7 +19,7 @@ def mergeSort(num):
             else:
                 result.append(right[j])
                 j += 1
-        # handle the rest num
+        # handle the rest num 
         return result + left[i:] + right[j:] 
     # base case  
     if len(num) <= 1:
