@@ -1,7 +1,7 @@
 # 26. Remove Duplicates from Sorted Array
 # that is better call re-arrange array rather than remove  ( move duplidate to the end) 
 #  trigger move operation once the element are diff  ( means  skip the same elements)
- def removeDuplicates(nums):
+def removeDuplicates(nums):
      if len(nums) <= 1:
          return len(nums)
      p1 = p2 = 0
