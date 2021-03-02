@@ -3,6 +3,8 @@
      if (haystack == "" and needle == ""):
          return 0
      i = 0
+     # here we can optimize the window sliding times 
+     # while i <= len(haystack) - len(needle)
      while i < len(haystack):
          window = haystack[i,i+len(needle)]
          if window == needle:
