@@ -21,6 +21,5 @@ def climbStairs2(self,n):
                 third = first + second
                 first = second
                 second = third
-                print(ImportWarning)
         return third
                 

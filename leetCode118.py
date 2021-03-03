@@ -12,3 +12,13 @@ def generate(self, numRows):
             row[j] = result[rowNum-1][j-1] + result[rowNum-1][j]
         result.append(row)
     return result
+
+def generate2(self, numRows):
+    result = []
+    for rowNum in range(numRows):
+        row = [0] * (rowNum + 1)
+        row[0],row[-1] = 1,1
+        for j in range(1,rowNum):
+            row[j] = result[row-1][j-1] + result[row-1][j]
+        result.append(row)
+    return result
