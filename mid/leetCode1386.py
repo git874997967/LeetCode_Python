@@ -46,3 +46,23 @@ def  maxNumberOfFamilies2(n,reversedSeats):
                 result += 1
     result += (n - len(rowSeats)) * 2 # empty row will not be shown so we can put two families
     return result        
+def  maxCount(n, reversedSeats):
+    rowSeats = {}
+    for seat in reversedSeats:
+        if seat[0] not in rowSeats:
+            rowSeats[seats[0]] = [0] * 11
+        rowSeats[seats[0]][seats[1]] += 1
+    result = 0
+    for rows in rowSeats.keys():
+        Found = False
+        if rows[2] == 0 and rows[3] == 0 and rows[4] == 0 and rows[5] == 0: 
+            Found = True
+            result += 1
+        if rows[6] == 0 and rows[7] == 0 and rows[8] == 0 and rows[9] == 0:
+             Found = True
+             result += 1
+        if not Found:
+            if rows[4] == 0 and rows[5] == 0 and rows[6] == 0 and rows[7] == 0:
+                result += 1
+    result += (n - len(rowSeats)) ** 2
+    return result

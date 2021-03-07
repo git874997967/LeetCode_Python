@@ -5,3 +5,6 @@ def kClosest(self, points, k):
 
 def kClosest2(self,points,k):
     heapq.nsmallest(k,points,lambda (x,y): x**2 + y**2 )
+
+
+ 

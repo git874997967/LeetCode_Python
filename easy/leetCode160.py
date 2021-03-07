@@ -13,3 +13,13 @@ def getIntersectionNode(self, headA, headB):
             return headB
         headB = headB.next
     return None
+    
+    # nodeInB = set()
+    # while headA is not None:
+    #     nodeInB.add(headA)
+    #     headA = headA.next  
+    # while headB is not None:
+    #     if headB in nodeInB:
+    #         return headB
+    #     headB = headB.next 
+    # return None

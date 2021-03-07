@@ -7,3 +7,6 @@ def findKthLargest( nums, k):
       return heapq.nsmallest(len(nums) - k  + 1, nums)[-1]
 arr = [1,3,5,6,2,4,8,0]
 print(findKthLargest(arr,3))
+
+
+ 
