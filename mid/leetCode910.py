@@ -1,6 +1,7 @@
 # 910. Smallest Range II
 # in a nutshell we need two pointers with two speeds  
-# behind with + 2Kspeed  and  previous with +0 speed
+# behind with + 2K speed  and  previous with +0 speed
+# the value bound should between A0  to A-1 and the Ai in between should bounce with Ai + 2K
 def smallestRangeII(self, A, K):
     A.sort()
     result = A[-1] - A[0]
