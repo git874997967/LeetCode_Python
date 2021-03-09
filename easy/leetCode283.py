@@ -2,7 +2,6 @@
 def moveZeroes(nums):
     zero = nonZero = 0
     for nonZero in range(len(nums)):
-        
         if nums[nonZero]!= 0:# non replace
             nums[zero],nums[nonZero] = nums[nonZero],nums[zero]
             zero += 1
