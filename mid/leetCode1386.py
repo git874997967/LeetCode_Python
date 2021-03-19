@@ -11,7 +11,7 @@ def maxNumberOfFamilies(n, reservedSeats):
                 leftOccupied = True
             if reservedSeats[row][i] >=4 and reservedSeats[row][i] <= 7:
                 midOccupied = True
-            if reservedSeats[row][o] >=6 and reservedSeatsp[row][i] <= 9:
+            if reservedSeats[row][o] >=6 and reservedSeats[row][i] <= 9:
                 rightOccupied = True
             row += 1
         if midOccupied:

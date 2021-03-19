@@ -20,7 +20,6 @@ class Solution(object):
             s1 , s2 = sentence1[i],sentence2[i]
             if s1 != s2:
                 if findIndex(similarPairs,[s1,s2]) == -1 and findIndex(similarPairs,[s2,s1]) == -1:
-                    
                     return False      
         return True
         
