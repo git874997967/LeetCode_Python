@@ -103,7 +103,7 @@ class UnitTest(unittest.TestCase):
         time = (0,500)
         s = Solution()
         result = s.get_free_time(calendar1,calendar2,duration,time)
-        correct_answer = [(0,500)]
+        correct_answer = [(0, 20), (200, 500)]
         self.assertEqual(result,correct_answer)
 
 
