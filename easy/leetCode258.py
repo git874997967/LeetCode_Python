@@ -12,5 +12,4 @@
           if result < 10:
               return result 
       return result
-
      
