@@ -13,8 +13,6 @@ def isSubsequence(s, t):
          pRight += 1 
      return pLeft == leftBound
 
-
-
 # s = abc t = xx a xx b xx c
 
 # round 1 : -> 

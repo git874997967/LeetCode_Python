@@ -14,3 +14,17 @@ def toHex(self, num: int) -> str:
 
 
 print(26 & (2>>4-1) )
+
+def toHex(num):
+    bitMap = '0123456789acdef'
+    if num == 0:
+        return '0'
+    result = ''
+    if num < 0:
+        num += 2 ** 32 
+    while num > 0 :
+        reminder = num % 16
+        num = (num - reminder ) // 16
+        result += str(bitMap[reminder])
+    # reverse the result 
+    return result[::-1]

@@ -26,4 +26,26 @@ def validWordAbbreviation( word, abbr):
  
 
 
+def validWordAbbreviation(word,abbr):
+    wPointer, aPointer = 0,0
+    while wPointer < len(word) and aPointer < len(abbr):
+        # must be char first
+        if abbr[aPointer].isalpha():
+            if word[wPointer] == abbr[aPointer]:
+                wPointer += 1
+                aPointer += 1
+            else:
+                return False 
+        else :
+            if abbr[aPointer] == '0':
+                return False
+            ## treat the num 
+            buf = 0
+            while abb[aPointer].isdigit() and aPointer < len(abbr):
+                buf = buf * 10 + int(abb[aPointer])
+                aPointer += 1
+            wPointer += buf 
+    return word[wPointer] == abbr[aPointer]
+
+
  
