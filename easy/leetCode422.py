@@ -1,21 +1,16 @@
 # 422. Valid Word Square
-def validWordSquare(words):
-     n = len(words)
-     for i in range(n):
-         row = words[i]
-         if len(row) > len(words):
-             return False
-         row = words[i]
-         for j in range( len(row)):
-             if len(words[j]) <= i or words[j][i] != row[j]:
-                 return False 
-     return True
-print(validWordSquare(["abcd","bnrt","crmy","dtye"]))
-
-
-print(validWordSquare( ["abcd","bnrt","crm","dt"]))
-
-print(validWordSquare(["ball","area","read","lady"]))
-
-
-print(validWordSquare(["ball","asee","let","lep"]))
+class Solution(object):
+    def validWordSquare(self, words):
+        """
+        :type words: List[str]
+        :rtype: bool
+        """
+        rows = len(words)
+        for row in range(rows):
+            word = words[row]
+            if len(word) > rows:
+                return False
+            for col in range(len(word)):
+                if  len(words[col]) <= row or words[row][col] != words[col][row]:
+                    return False
+        return True
