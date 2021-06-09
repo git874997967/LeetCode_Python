@@ -14,3 +14,10 @@ class Solution(object):
                 if  len(words[col]) <= row or words[row][col] != words[col][row]:
                     return False
         return True
+
+    def validWordSquare2(self,words):
+        for i, row in enumerate(words):
+            col = ''.join(row[i] for row in words if i < len(words))
+            if len(col) != len(row) or col != row:
+                return False
+        return True
