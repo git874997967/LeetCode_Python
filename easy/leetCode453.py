@@ -12,11 +12,7 @@ def minMoves(nums):
         count += nums[i] - nums[0]
     return count
 
- 
-    
-
-
-
-    return move - min * nums.length
+def minMoves(nums):
+    return sum(nums) - min(nums) * nums.length
 nums =[13,18,3,10,35,68,50,20,50]
 print(minMoves(nums))
