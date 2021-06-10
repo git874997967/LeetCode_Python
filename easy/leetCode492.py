@@ -7,7 +7,7 @@ def constructRectangle(area):
           for i in range(root,0,-1):
               if area % i == 0:
                   return [int (area / i), i]
-      return []
+      return [area,1]
 
 
 
