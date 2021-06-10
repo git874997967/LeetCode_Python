@@ -6,7 +6,7 @@ def validWordSquare(words):
 
                 if len(col) != len(row) or col != row :
                     return False
-        return True
+            return True
 
 def validWordSquare2(self,words):
     for i, row in enumerate(words):
