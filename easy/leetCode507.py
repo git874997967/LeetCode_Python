@@ -1,4 +1,5 @@
 # 507. Perfect Number
+# while for loop is fater than the while
 def checkPerfectNumber(num):
     if num == 1 or num == 2:
         return False
