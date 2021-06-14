@@ -20,6 +20,6 @@ def isSameTree(self,root,subRoot):
 
 
 def  isSubTree2(self,root,subRoot):
-    def helper(node):
-        return  "x" if not node else "#" + str(node.val) + helper(node.left) + helper(node.right)
-    return True if helper(subRoot) in help(root) else False 
+    def toString(node):
+        return  "x" if not node else "#" + str(node.val) + toString(node.left) + toString(node.right)
+    return True if toString(subRoot) in help(root) else False 
