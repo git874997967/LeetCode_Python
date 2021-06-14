@@ -7,7 +7,7 @@ def reverseStr(s,k):
 
 
 def  reverseStr1(s,k):
-    i,length,result = 0,len(s),""
+    i,length,final = 0,len(s),""
     while i < length:
         if k <= abs(length - i) < 2 * k:
             final = final + s[i:i+ k][::-1] + s[i+k:length]
@@ -16,7 +16,7 @@ def  reverseStr1(s,k):
         else:
             final = final + s[i:i+k][::-1] + s[i+k:i+ 2* k]
         i = i + 2  * k
-    return result 
+    return final 
 
 print(reverseStr("abcdefg",2))
 
