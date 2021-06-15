@@ -1,6 +1,6 @@
 # 594. Longest Harmonious Subsequence
 def findLHS(nums):
-    numMap, maxVal = {},{}, 0
+    numMap, maxVal = {}, 0
     for num in nums:
         if num in numMap:
             numMap[num] += 1
