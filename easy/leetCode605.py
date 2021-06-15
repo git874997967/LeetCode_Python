@@ -1,4 +1,4 @@
-# 605. Can Place Flowers
+# 605. Can Place Flowers edge detection
 #  three adjancent 0 can place 1 flower
 def canPlaceFlowers(flowerbed, n):
         s = len(flowerbed)
