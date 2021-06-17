@@ -6,8 +6,8 @@ def arrangeCoins(n):
          cur = mid * (mid + 1) / 2
          if cur == n:
              return mid
-        if cur < n :
+         if cur < n :
             start = mid 
-        if cur > n:
+         if cur > n:
             end = mid 
-    return min(start,end)
+     return min(start,end)

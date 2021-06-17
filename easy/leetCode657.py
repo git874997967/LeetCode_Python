@@ -16,7 +16,6 @@ def judgeCircle(moves):
 
 print(judgeCircle("UD"))
 
-
 print(judgeCircle("LDRRLRUULR"))
 
 print(judgeCircle("LL"))
