@@ -1,22 +1,32 @@
 # 682. Baseball Game
 def calPoints(ops):
+    
     result,stk = 0, []
+    
     for item in ops:
-        if item.isnumeric() or item.strip("-").isnumeric():
-            print(int(item))
-            stk.append(int(item))
+
         if item == 'C':
+        
             stk.pop()
-        if item == 'D':
+        
+        elif item == 'D':
+        
             prev = stk.pop()
             stk.append(prev)
             stk.append(prev * 2)
-        if item == '+':
+        
+        elif item == '+':
+        
             second = stk.pop()
             first = stk.pop()
             stk.append(first)
             stk.append(second)
             stk.append(second + first)
+        
+        else: 
+        
+            print(int(item))
+            stk.append(int(item))
  
     return sum([key for key in stk])
 
