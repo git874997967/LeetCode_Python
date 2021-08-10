@@ -1,4 +1,4 @@
-# 697. Degree of an Array
+# 697. Degree of an Array (mid) 
 def findShortestSubArray(nums):
     maxDegree, result, degreeCandidate ,degreeMap = 0 ,len(nums), {}, {}
     

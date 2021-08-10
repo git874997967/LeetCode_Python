@@ -5,7 +5,6 @@ def  valid(s):
         # str1 skip the end and str2 skip then start
         if s[start] != s[end]:
             str1 , str2 = s[start:end],s[start + 1: end + 1]
-            print(str1, str2)
             return  str1 == str1[::-1] or str2 == str2[::-1]
         start += 1
         end -= 1

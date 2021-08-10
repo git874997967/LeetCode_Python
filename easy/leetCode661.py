@@ -12,13 +12,8 @@ def imageSmoother(img):
                 count += 1
                 sumNum += pic[newX][newY]
 
-        print(sumNum, count)
         return math.floor(sumNum / count )
-        
-    for i in range(row):
-        for j in range(col):
-            print("the index is" , i, j, img[i][j])
-            result[i][j] = helper(img, i, j )
+
     return result 
 
 #print(imageSmoother([[1,1],[1,1]]))

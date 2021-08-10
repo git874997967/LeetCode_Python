@@ -1,4 +1,4 @@
-# 696. Count Binary Substrings mid 
+# 696. Count Binary Substrings (mid) 
 def countBinarySubstrings(s):
     groups = [1]
     for i in range(1,len(s)):
