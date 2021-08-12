@@ -1,14 +1,14 @@
 # 674. Longest Continuous Increasing Subsequence
 def findLengthOfLCIS(nums):
-    result = currLength = 1
-    for start in range(1, len(nums)):
-        if nums[start] > nums[start - 1]:
-            currLength += 1
-        else:
-            currLength = 1
-        result = max(result, currLength)
+     result = currentMax = 1
+     for i in range(1,len(nums)):
+         if nums[i] > nums[i - 1]:
+             currentMax += 1
+         else:
+             currentMax = 1
+         result = max(currentMax, result)
 
-    return result 
+     return result 
 
 print(findLengthOfLCIS([1,3,5,4,7]))
 

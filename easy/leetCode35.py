@@ -10,7 +10,7 @@ def searchInsert(self, nums, target):
     start = 0 
     end = len(nums) -1 
     while start +1 < end:
-        mid = ( start + end ) / 2
+        mid = ( start + end ) // 2
         if nums[mid] == target:
             return mid
         if  nums[mid] < target:

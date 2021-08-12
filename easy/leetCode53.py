@@ -6,7 +6,7 @@ def maxSubArray(nums):
         :rtype: int
         """ 
         currentVal = finalVal = nums[0]
-        for i in range( len(nums)):
+        for i in range(len(nums)):
                 currentVal = 0
                 for j in range( i,len(nums)):
                         currentVal +=nums[j] 

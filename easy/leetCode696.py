@@ -41,10 +41,10 @@ def countBinarySubstring3(s):
 def countBinarySubstring3(s):
     print(s.replace("01","0 1").replace("10", "1 0"))
     c = list(map(len, s.replace('10', '1 0').replace('01', '0 1').split()))
-    print(c)
     res = 0
-    # for i in range(1, len(c)):
-    #     res += min(c[i], c[i-1])
+    for i in range(1, len(c)):
+        res += min(c[i], c[i-1])
+    print(res)
     return res
 
 
