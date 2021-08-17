@@ -28,9 +28,27 @@ def reverseStr2(s, k):
        
     return final 
 
+def selfDividingNumbers( left, right):
+    result = []
+    for i in range(left,right + 1):
+        num , diviable = i, True 
+        while num > 0:
+            print(num)
+            digit = num % 10
+            if digit == 0 or i % digit != 0:
+                diviable = False
+                break
+            num = num // 10
+        if diviable:
+            result.append(i)
+
+            
+    return result
 
 
-print(reverseStr("abcdefg",2))
+selfDividingNumbers(1,22)
 
-print(reverseStr2("abcdefg",2))
 
+selfDividingNumbers(47,85)
+
+#

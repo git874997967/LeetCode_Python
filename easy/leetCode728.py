@@ -1,7 +1,6 @@
 # 728. Self Dividing Numbers
 def selfDividingNumbers(left, right):
     result = []
-    print("hello world")
     for num in range(left,right + 1):
         strNum = str(num)
         length = len(strNum)
