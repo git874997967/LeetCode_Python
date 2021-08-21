@@ -1,5 +1,4 @@
 #925. Long Pressed Name
-from typing import TypedDict
 
 
 def isLongPressedName2( name, typed):
@@ -8,7 +7,7 @@ def isLongPressedName2( name, typed):
     if len(typed ) < len(name) :
         return False 
     np = tp = 0
-    while np < len(name)   and tp < len(typed)  :
+    while np < len(name) and tp < len(typed)  :
         
         if name[np] != typed[tp] :
             return False 

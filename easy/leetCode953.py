@@ -2,26 +2,19 @@
 import unittest
 class Solution(object):
     def isAlienSorted(self, words, order):
-        order_index = {c: i for i, c in enumerate(order)}
-
+        orderMap = {c:i for i, c in enumerate(order)}
+        # compare the i and i + 1 in words
         for i in range(len(words) - 1):
-            word1 = words[i]
-            word2 = words[i+1]
-
-            # Find the first difference word1[k] != word2[k].
-            for k in range(min(len(word1), len(word2))):
-                # If they compare badly, it's not sorted.
-                if word1[k] != word2[k]:
-                    if order_index[word1[k]] > order_index[word2[k]]:
-                        return False
-                    break
-            else:
-                # If we didn't find a first difference, the
-                # words are like ("app", "apple").
-                if len(word1) > len(word2):
-                    return False
-
-        return True
+            for j in range(len(words[i])):
+                if j > len(words[i + 1]):
+                    return False 
+                if words[i][j] != words[i + 1][j]:
+                    if orderMap[words[i][j]] > orderMap[words[i+1][j]]:
+                        return False 
+                    else:
+                        break
+        return True 
+         
 
 class UnitTest(unittest.TestCase):
    
