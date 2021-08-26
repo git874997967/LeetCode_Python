@@ -1,6 +1,7 @@
 #1030. Matrix Cells in Distance Order
 from collections import deque
 def allCellsDistOrder( rows, cols, rCenter, cCenter):
+    #BFS + edge detection 
     dirs = [[1,0],[-1,0],[0,1],[0,-1]]
     visited = [[0] * cols for _ in range(rows)]
     center = (rCenter,cCenter)

@@ -23,7 +23,7 @@ def findJudge2(n, trust):
         if candidate == a :
             return -1
         trustScore[a]  = -1
-        if trustScore[b] > 0:
+        if trustScore[b] >= 0:
             trustScore[b] += 1
             if trustScore[b] == n -1:
                 candidate = b

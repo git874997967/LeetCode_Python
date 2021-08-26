@@ -45,6 +45,32 @@ def selfDividingNumbers( left, right):
             
     return result
 
+def townJudge(n,trust):
+    outArr,inArr,candidate = [0] *(n + 1),[0] * (n + 1), 0
+    if n - 1> len(trust) : 
+        return -1
+    for i,j in trust:
+        outArr[i] += 1
+        inArr[j] += 1
+    for i in range(1,n + 1):
+        if inArr[i] == n -1 and outArr[i] == 0:
+            return i
+    return -1
+
+def townJudge2(n, trust):
+    if len(trust) < n -1:
+        return -1 
+    turstScore = [0] * (n-1)
+    candidate = 0
+    for i , j in trust:
+        if candidate == i:
+            return - 1
+        turstScore[i] -= 1
+        if turstScore[j] >= 0:
+            turstScore[j] += 1
+            if turstScore[j] == n - 1:
+                return j
+    return candidate or -1
 
 selfDividingNumbers(1,22)
 
