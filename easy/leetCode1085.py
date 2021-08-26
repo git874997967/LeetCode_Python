@@ -4,8 +4,6 @@ def sumOfDigits( nums):
     while minNum :
         result += minNum % 10
         minNum = minNum // 10
-         
-
     print(abs(result%2 - 1),result)
 
 sumOfDigits([34,23,1,24,75,33,54,8])
