@@ -3,6 +3,7 @@ def validPalindrome(s):
     start , end  = 0, len(s) - 1
     while start < end:
         if s[start] != s[end]:
+            #str1 skip the first char str2 skip the last char
             str1 , str2 = s[start:end], s[start + 1:end + 1]
             return str1 == str1[::-1] or str2 == str2[::-1]
         start += 1

@@ -4,7 +4,7 @@ def isPalindrome(head):
        slow = head
        fast = head 
        while  fast is not None and fast.next is not None :
-           fast = fast. next.next 
+           fast = fast.next.next 
            next = slow.next 
            slow.next = prev  
            prev = slow 
