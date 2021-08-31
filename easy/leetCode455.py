@@ -22,6 +22,7 @@ def findContentChildren(g,s):
     return count 
 
 def findCountentChildren(g,s):
+   
     s.sort()
     g.sort()
     count, l_g , l_s =0, len(g) , len(s)
