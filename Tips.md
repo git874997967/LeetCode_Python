@@ -10,3 +10,7 @@ Tips
 8  arr.remove(val) 只移除第一个匹配的值  [1,1,1,2].remove(1) --> [1,1,2]
 
 9 查看 substring  使用 count 方法 不是.index()
+
+10 perfix sum 是 到 目前为止的 值的sum
+
+11  binaryString to int    call (int,2)
