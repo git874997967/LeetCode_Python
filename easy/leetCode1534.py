@@ -6,7 +6,6 @@ def countGoodTriplets(arr, a, b, c):
         while j < len(arr):
             k = j + 1
             while k < len(arr):
-                
                 if abs(arr[i] - arr[j]) <= a and abs(arr[j] - arr[k]) <=b and abs(arr[i] - arr[k]) <= c:
                     result += 1
                 k += 1
