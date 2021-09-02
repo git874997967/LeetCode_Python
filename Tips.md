@@ -1,6 +1,8 @@
 Tips
 1 对数组排序  sorted(arr,key = lambda x: fun) 对应相关规则 不改变arr 排列 须使用 新变量保存结果
 2 对dict 排序  sorted(dict.items(), key = lambda x:(x[1],x[0]) )  对 val 值进行升序 val 相同对 key 进行升序
+
+排序后遍历无需加 map.items()
 3 DefaultDict  须从collections 引入 些许影响性能
 4可以适应 zip(*matrix) 对 二维数组进行按列遍历
 5 bisect_left(arr, val) 返回第一个 插入的val 的位置  arr 必须有序

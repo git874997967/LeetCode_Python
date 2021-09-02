@@ -21,15 +21,15 @@ def dictExercise(map):
     map.setdefault("未知key","abcdefg")
     # for key in map.keys():
     #     print(key, map.get(key,"未知元素"))
-    # myMap = {}
-    # for i in range(65,74):
-    #     myMap[chr(i)] = i
+    myMap = {}
+    for i in range(65,74):
+        myMap[chr(i)] = i
      
     # for key, item in myMap.items():
     #     print(key,item)
-    # newMap = sorted(myMap.items(), key = lambda item:item[1], reverse= False)
-    # for key, item in newMap :
-    #     print(key,item)
+    newMap = sorted(myMap.items(), key = lambda item:item[0], reverse= True)
+    for key, item in newMap :
+        print(key,item)
 #  count the freq for each number
     testArr = [1,2,45,7,8,2,9,45,1,0,8,8,7,7,7]
     countMap = {}
