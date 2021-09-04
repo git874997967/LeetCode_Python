@@ -1,7 +1,4 @@
 #1700. Number of Students Unable to Eat Lunch
-from typing import Deque
-
-
 from collections import deque 
 def countStudents(students, sandwiches):
         dStudent, dSandwiches = deque(students),deque(sandwiches)
