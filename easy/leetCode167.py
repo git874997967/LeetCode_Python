@@ -1,5 +1,5 @@
 #167. Two Sum II - Input array is sorted
- def twoSum(numbers, target):
+def twoSum(numbers, target):
       start , end = 0, len(numbers) - 1
       while start < end:
           if numbers[start] + numbers[end] < target:

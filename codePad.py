@@ -1,21 +1,28 @@
-def  findShortestSubArray(A):
-    first, count , res, degree = {},{},0,0
-    for i , a in enumerate(A):
-        # remember the first apperance for each number
-        first.setdefault(a,i)
-        # remember the apperance time for each number
-        count[a] = count.get(a,0) + 1
-        if count[a] > degree:
-            degree = count[a]
-            res = i - first[a] + 1
-        elif count[a] == degree:
-            res = min(res, i - first[a] + 1)
-    return res
+def compress(chars ):
+        i, j = 0, 0
+        start = 0
+        while i < len(chars) and j < len(chars):
+            curr = chars[i]
+            while j < len(chars) and chars[j] == curr:
+                j += 1
 
-   
+            # chars[j] is a different letter
+            counts = j - i
+            if counts == 1:
+                chars[start] = curr
+                start += 1
+            else:
+                chars[start] = curr
+                start += 1
+                for digit in str(counts):
+                    chars[start] = digit
+                    start += 1
 
+            i = j
+        print(chars)
+        return start
 
-
-findShortestSubArray([1,3,2,2,3,1])
-
-findShortestSubArray([1,2,2,3,1,4,2])
+compress(["a","a","b","b","c","c","c"])
+compress(["a"])
+compress(["a","b","b","b","b","b","b","b","b","b","b","b","b"])
+compress(["a","a","a","b","b","a","a"])
