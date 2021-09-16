@@ -1,13 +1,12 @@
 #1971. Find if Path Exists in Graph
-from collections import deque
 def validPath(n, edges, start, end):
      graph = [[] for _ in range(n)]
      for u, v in edges:
-         
+
             graph[u].append(v)
             graph[v].append(u)
      dq =  [start] 
-     print(graph)
+     
      visited = [False] * n
      while dq:
          node = dq.pop(0)

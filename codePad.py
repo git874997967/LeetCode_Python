@@ -1,39 +1,25 @@
-#934. Shortest Bridge BFS + DFS
-def shortestBridge(grid):
-        result,n = 0, len(grid)
-        dirs = [(0,0),(-1,0),(0,-1),(1,0),(0,1)]
-        landList = []
-        def dfs(i,j):
-            for dir in dirs:
-                newX, newY = i + dir[0], j + dir[1]
-                if 0 <= newX < n and 0 <= newY < n and grid[newX][newY] == 1:
-                    grid[newX][newY]  = 2
-                    landList.append((newX,newY))
-                    dfs(newX,newY)
+ # res用来存放结果
+def permuteUnique2(nums):
+        if not nums: return []
+        res = []
+        used = [0] * len(nums)
+        def backtracking(used, path):
+            # 终止条件
+            if len(path) == len(nums):
+                res.append(path.copy())
+                return
+            for i in range(len(nums)):
+                if not used[i]:
+                    if i>0 and nums[i] == nums[i-1] and not used[i-1]:
+                        continue
+                    used[i] = 1
+                    path.append(nums[i])
+                    backtracking(used, path)
+                    path.pop()
+                    used[i] = 0
+        # 记得给nums排序
+        backtracking(used,[])
+        print(res)
+        return res
 
-        def findIsland():
-            for i in range(n):
-                for j in range(n):
-                    if grid[i][j] :
-                       return dfs(i,j)
-                
-        findIsland()
-                    
-                        
-        while landList:
-            for _ in range(len(landList)):
-                x, y = landList.pop(0)
-                for dir in dirs:
-                    newX , newY = x + dir[0], y + dir[1]
-                    if 0 <= newX < n  and 0 <= newY < n and grid[newX][newY] != 2:
-                        if grid[newX][newY] == 0:
-                            grid[newX][newY ] = 2
-                            landList.append((newX,newY))
-                        elif grid[newX][newY] == 1:
-                            print(result)
-                            return result
-            result += 1
-        return result
-
-grid = [[0,1],[1,0]]
-shortestBridge(grid)
+permuteUnique2([1,1,2])

@@ -1,39 +1,26 @@
 #797. All Paths From Source to Target
-from typing import NewType
-
+# [(0, [0])]
+# [(1, [0, 1]), (2, [0, 2])]
+# [(2, [0, 2]), (3, [0, 1, 3])]
+# [(3, [0, 1, 3]), (3, [0, 2, 3])]
+# [(3, [0, 2, 3])]
 
 def allPathsSourceTarget(graph):
-    result,n = [], len(graph) - 1
-    nodeQueue = [[0]]
+      result, target = [], len(graph) - 1
+      curPath = [[0]]
 
-    def backTrack(currNode,path):
-        if currNode == n- 1:
-            result.append(list(path))
-            return 
-        for nextNode in graph[currNode]:
-            path.append(nextNode)
-            backTrack(nextNode,path)
-            path.pop()
+      while curPath:
+          path = curPath.pop(0)
+          if path and len(path) != 0:
+              lastNode = path[-1]
+              if lastNode == target:
+                  result.append(path)
+              for val in graph[lastNode]:
+                  curPath.append(path + [val])
 
-    backTrack(0,nodeQueue)
-     
-    return result
-
-def allPathsSourceTarget2(graph):
-    result = []
-    dq = [(0, [0])]
-    target = len(graph) - 1
-    while dq:
-        cur,route = dq.pop(0)
-        if cur == target:
-            result.append(route)
-        else:
-            for node in graph[cur]:
-                print(type(route))
-                dq.append((node, route + [node]))
-    print(result)
-    return result
+      print(result)
 
 graph = [[1,2],[3],[3],[]]
+graph = [[4,3,1],[3,2,4],[3],[4],[]]
 allPathsSourceTarget(graph)
 

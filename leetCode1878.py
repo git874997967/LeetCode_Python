@@ -16,10 +16,10 @@ def getBiggestThree(grid):
                 cur += grid[i + l][j]
                 ## add lines
                 for k in range(1,l):
-                    cur += grid[i - k][j - l + k] #
-                    cur += grid[i + k][j - l + k] #
-                    cur += grid[i - k][j + l - k] # 
-                    cur += grid[i + k][j + l - k] #
+                    cur += grid[i - k][j - l + k] # bottom 
+                    cur += grid[i + k][j - l + k] # top
+                    cur += grid[i - k][j + l - k] # bottom
+                    cur += grid[i + k][j + l - k] # top
                 result.add(cur)
     result = list(result)
     result.sort(reverse= True)
