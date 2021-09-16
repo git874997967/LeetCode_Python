@@ -1,5 +1,4 @@
 #759. Employee Free Time
-import heapq
 class Interval(object):
     def __init__(self, start=None, end=None):
         self.start = start

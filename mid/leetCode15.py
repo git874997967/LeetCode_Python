@@ -6,13 +6,13 @@ def threeSum(arr):
     result = []
     n = len(arr)
     for i in range(n):
-        left , right = i + 1, n - 1
         # all others larger than 0 and no matched condition anymore 
         if arr[i] > 0 :
           break 
         # we need to find the last th for the repeat num
         if i >= 1 and arr[i] == arr[i - 1]:
             continue
+        left , right = i + 1, n - 1
         while left < right:
             total = arr[i] + arr[left] + arr[right]
             if total > 0 :
