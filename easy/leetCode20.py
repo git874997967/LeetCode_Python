@@ -14,7 +14,7 @@ def isValid(s):
             if len(stack) == 0 or s.pop() != '[':
                 return False
         elif s[i] =='}':
-            if len(stack) == 0 or s.pop()! = '{':
+            if len(stack) == 0 or s.pop() != '{':
                 return False
     if len(stack) == 0:
         return True

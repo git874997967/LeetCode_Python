@@ -1,25 +1,12 @@
- # res用来存放结果
-def permuteUnique2(nums):
-        if not nums: return []
-        res = []
-        used = [0] * len(nums)
-        def backtracking(used, path):
-            # 终止条件
-            if len(path) == len(nums):
-                res.append(path.copy())
-                return
-            for i in range(len(nums)):
-                if not used[i]:
-                    if i>0 and nums[i] == nums[i-1] and not used[i-1]:
-                        continue
-                    used[i] = 1
-                    path.append(nums[i])
-                    backtracking(used, path)
-                    path.pop()
-                    used[i] = 0
-        # 记得给nums排序
-        backtracking(used,[])
-        print(res)
-        return res
+def removeDup(nums,target):
+    i = 0
+    for j in range(len(nums)):
+        if nums[j] == target:
+            continue
+        else:
+            nums[i] = nums[j]
+            i += 1
+    print(nums[:i])
+    return nums[:i]
 
-permuteUnique2([1,1,2])
+removeDup([0,1,2,2,3,0,4,2],2)

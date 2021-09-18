@@ -6,9 +6,21 @@ class ListNode(object):
     def reverseList(self, head):
         if not head or head.next is None:
             return head 
-        prev, cur = None, head 
+        prev, cur ,next = None, head,head 
         while cur:
-            cur.next,prev,cur = prev,cur,cur.next 
+          cur.next, pre, cur = pre, cur,cur.next 
+        return prev 
+
+
+    def reverseList(self, head):
+        if not head or head.next is None:
+            return head 
+        prev, cur   = None, head  
+        while cur:
+           temp = cur.next
+           cur.next = prev 
+           prev = cur
+           cur = temp
         return prev 
 
 
