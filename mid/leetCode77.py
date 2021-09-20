@@ -11,7 +11,7 @@ def combine(n, k):
               backTrack(i + 1, block)
               block.pop(-1)
       
-      backTrack(1,[])
+      backTrack(0,[])
       print(result)
       return result 
 combine(5,2)

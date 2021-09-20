@@ -6,7 +6,7 @@ def subsets(nums):
      def backTracking(index, block):
          result.append(block[:])
 
-         if index >= len(nums):
+         if len(block) >= len(nums):
              return 
 
          for i in range(index,len(nums)):
