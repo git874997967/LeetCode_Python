@@ -60,6 +60,20 @@ def longestPalindrome2(s):
      
     return s[start:end + 1]
 
+
+def longestPalindrome3(s):
+    n = len(s)
+    f = [[True] * n for _ in range(n)]
+    k, max_length = 0, 1 
+    for i in range(n -2 ,-1,-1):
+        for j in range(i+ 1, n):
+            f[i][j] = False 
+            if s[i] == s[j]:
+                f[i][j] =  f[i + 1] [j - 1]
+                if f[i][j] and mx < j - i + 1 :
+                    k, max_length = i, j - i+ 1 
+    return s[k:k + max_length]
+
 longestPalindrome2("babab")
 
 # longestPalindrome2("ababad")
