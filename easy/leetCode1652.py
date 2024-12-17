@@ -10,13 +10,15 @@ def decrypt(code, k):
     else:
         newCode  = code * 2
         for i in range(len(code),len(newCode),1):
+            print(newCode[i+ k:i], i+ k , i)
             result.append(sum(newCode[i+k:i]))
 
     print(result)
 
-decrypt([5,7,1,4],3)
+# decrypt([5,7,1,4],3)
 
-decrypt([5,7,1,4],0)
+# decrypt([5,7,1,4],0)
 
 decrypt([2,4,9,3],-2)
-  
+
+ 

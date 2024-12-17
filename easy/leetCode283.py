@@ -18,5 +18,16 @@ def moveZeroes2(nums):
             nums.append(0)
         i += 1
     return nums
-print(moveZeroes2(arr))
+#print(moveZeroes2(arr))
+
+
+def moveZero3(arr):
+    nonZero = zero = 0 
+    for  zero in  range(len(arr)):
+        if arr[zero] != 0:
+            arr[zero] , arr[nonZero] = arr[nonZero], arr[zero]
+            nonZero += 1
+    print(arr)
+    
+moveZero3([0,1,0,3,12])
         

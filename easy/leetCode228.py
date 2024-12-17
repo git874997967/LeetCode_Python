@@ -27,4 +27,24 @@ nums2 = [0,1,2,4,5,7]
 summaryRanges([-1])
 summaryRanges([])
 summaryRanges(nums)
-summaryRanges(nums2)
+
+
+def summaryRanges2(nums):
+    def f(num1 ,num2):
+        return str(num1) if num1 == num2 else f'{num1}->{num2}'
+    start , n = 0,len(nums)
+    result = []
+    
+    while start < n :
+        end = start  
+        while end + 1 < n and  nums[end + 1] == nums[end] + 1:
+            end += 1 
+            
+        
+        result.append(f(nums[start], nums[end]))
+        start = end + 1  
+    print(result)
+    return result    
+
+
+summaryRanges2(nums2)

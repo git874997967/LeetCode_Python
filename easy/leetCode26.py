@@ -17,3 +17,6 @@ def removeValue( nums, val):
         if nums[p2] != val:
            nums[p1] = nums[p2]
            p1 += 1
+           
+           
+           
